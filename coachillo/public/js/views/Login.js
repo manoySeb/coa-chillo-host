@@ -71749,12 +71749,12 @@ module.exports = function(module) {
 /*!*********************************!*\
   !*** ./resources/js/Helpers.js ***!
   \*********************************/
-/*! exports provided: showSznNotification */
+/*! exports provided: showNotification */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showSznNotification", function() { return showSznNotification; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showNotification", function() { return showNotification; });
 /* harmony import */ var iziToast__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! iziToast */ "./node_modules/iziToast/dist/js/iziToast.js");
 /* harmony import */ var iziToast__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(iziToast__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var iziToast_dist_css_iziToast_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! iziToast/dist/css/iziToast.css */ "./node_modules/iziToast/dist/css/iziToast.css");
@@ -71764,7 +71764,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function showSznNotification(params) {
+function showNotification(params) {
   return iziToast__WEBPACK_IMPORTED_MODULE_0___default.a.show({
     title: params.title ? params.title : '',
     message: params.message,
@@ -71850,7 +71850,7 @@ if (token) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(global) {/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var simple_react_validator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! simple-react-validator */ "./node_modules/simple-react-validator/dist/simple-react-validator.min.js");
@@ -72018,7 +72018,7 @@ var Login = /*#__PURE__*/function (_Component) {
         style: {
           color: '#da8cff'
         }
-      }, global.variables.site_name)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Hello! let's get started"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      }, "Coa-Chillo")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Hello! let's get started"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         className: "pt-3",
         ref: function ref(c) {
           _this2.form = c;
@@ -72062,7 +72062,6 @@ var Login = /*#__PURE__*/function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (Login);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../node_modules/webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
 
 /***/ }),
 
@@ -72350,7 +72349,7 @@ var Registration = /*#__PURE__*/function (_Component) {
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {module.exports = global.variables = {
-  site_name: 'React Laravel'
+  site_name: 'Coachillo'
 };
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../node_modules/webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
 
@@ -72454,7 +72453,7 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\JR\Desktop\CS3105\3105-FINALPROJ\coachillo\resources\js\views\Login.js */"./resources/js/views/Login.js");
+module.exports = __webpack_require__(/*! D:\appleTree\y03s01\cs3105\coachillo-host-test\coa-chillo-host\coachillo\resources\js\views\Login.js */"./resources/js/views/Login.js");
 
 
 /***/ })

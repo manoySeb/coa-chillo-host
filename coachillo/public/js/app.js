@@ -32604,9 +32604,9 @@ if (token) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\JR\Desktop\CS3105\3105-FINALPROJ\coachillo\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! C:\Users\JR\Desktop\CS3105\3105-FINALPROJ\coachillo\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! C:\Users\JR\Desktop\CS3105\3105-FINALPROJ\coachillo\resources\sass\Leads.scss */"./resources/sass/Leads.scss");
+__webpack_require__(/*! D:\appleTree\y03s01\cs3105\coachillo-host-test\coa-chillo-host\coachillo\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! D:\appleTree\y03s01\cs3105\coachillo-host-test\coa-chillo-host\coachillo\resources\sass\app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! D:\appleTree\y03s01\cs3105\coachillo-host-test\coa-chillo-host\coachillo\resources\sass\Leads.scss */"./resources/sass/Leads.scss");
 
 
 /***/ })
