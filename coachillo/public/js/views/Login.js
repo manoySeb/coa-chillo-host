@@ -72018,7 +72018,7 @@ var Login = /*#__PURE__*/function (_Component) {
         style: {
           color: '#da8cff'
         }
-      }, "Coa-Chillo")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Hello! let's get started"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      }, "Coa-Chillo")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Welcome Coach, Sign in to begin."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         className: "pt-3",
         ref: function ref(c) {
           _this2.form = c;
