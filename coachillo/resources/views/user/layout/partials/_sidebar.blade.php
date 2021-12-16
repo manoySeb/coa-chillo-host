@@ -21,6 +21,12 @@
               </a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="{{ route('Dashboard') }}">
+                  <span class="menu-title">Calculator</span>
+                  <i class="mdi mdi-home menu-icon"></i>
+                </a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" data-toggle="collapse" href="#lead-routes" aria-expanded="false" aria-controls="lead-routes">
                 <span class="menu-title">Leads</span>
                 <i class="menu-arrow"></i>
@@ -34,10 +40,10 @@
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://github.com/arifszn/react-laravel" target="_blank">
-                <span class="menu-title">Source</span>
-                <i class="mdi mdi-github-circle menu-icon"></i>
-              </a>
-            </li>
+                <a class="nav-link" href="{{ route('Dashboard') }}">
+                  <span class="menu-title">Products</span>
+                  <i class="mdi mdi-home menu-icon"></i>
+                </a>
+            </li>          
           </ul>
         </nav>
