@@ -16,6 +16,25 @@ function Dashboard(props) {
        loading: false
     });
 
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            const iziToast = require('iziToast');
+
+            iziToast.show({
+                timeout: 0,
+                progressBar: false,
+                displayMode: 'once',
+                theme: 'light',
+                id: 'star-notification',
+                title: '<a target="_blank" rel="noopener noreferrer" href="https://github.com/arifszn/react-laravel"><img src="https://img.shields.io/github/stars/arifszn/react-laravel?style=social" alt="Github Star"/></a>',
+                message: 'We need your support. Please ⭐️ on <a target="_blank" rel="noopener noreferrer" href="https://github.com/arifszn/react-laravel">GitHub</a> to help us increase.'
+            });
+        }
+        
+        props.setActiveComponentProp('Dashboard');
+        loadData();
+    }, []);
+
     const loadData = () => {
         setState({
             ...state,
@@ -46,7 +65,7 @@ function Dashboard(props) {
     };
 
     const showRecentLeads = () => {
-        return state.recentLeads.length == 0 ? <tr><td className="text-muted lead">No Recent Lead</td></tr> :
+        return state.recentLeads.length == 0 ? <tr><td className="text-muted lead">No Recent Lead</td></tr> : 
                 state.recentLeads.map((lead, i) => {
                     return <tr key={i}>
                                 <td>
@@ -72,13 +91,13 @@ function Dashboard(props) {
 				 	Dashboard
 				</h3>
 			</div>
-
+			
             <div className="row animated fadeIn">
                 <div className="col-md-4 stretch-card grid-margin">
                     <div className="card bg-danger card-img-holder text-white">
                     <div className="card-body">
                         <img src="/assets/images/dashboard/circle.svg" className="card-img-absolute" alt="circle-image"/>
-                        <h4 className="font-weight-normal mb-3">Total Clients<i className="mdi mdi-chart-line mdi-24px float-right"></i>
+                        <h4 className="font-weight-normal mb-3">Total Leads <i className="mdi mdi-chart-line mdi-24px float-right"></i>
                         </h4>
                         <h2 className="mb-5">{state.totalLeads}</h2>
                     </div>
@@ -88,7 +107,7 @@ function Dashboard(props) {
                     <div className="card bg-gradient-info card-img-holder text-white">
                     <div className="card-body">
                         <img src="/assets/images/dashboard/circle.svg" className="card-img-absolute" alt="circle-image" />
-                        <h4 className="font-weight-normal mb-3">New Clients This Week <i className="mdi mdi-calendar-text mdi-24px float-right"></i>
+                        <h4 className="font-weight-normal mb-3">New Leads This Week <i className="mdi mdi-calendar-text mdi-24px float-right"></i>
                         </h4>
                         <h2 className="mb-5">{state.weeklyLeads}</h2>
                     </div>
@@ -98,7 +117,7 @@ function Dashboard(props) {
                     <div className="card bg-green-gradient card-img-holder text-white">
                     <div className="card-body">
                         <img src="/assets/images/dashboard/circle.svg" className="card-img-absolute" alt="circle-image" />
-                        <h4 className="font-weight-normal mb-3">New Clients This Month <i className="mdi mdi-calendar-multiple-check mdi-24px float-right"></i>
+                        <h4 className="font-weight-normal mb-3">New Leads This Month <i className="mdi mdi-calendar-multiple-check mdi-24px float-right"></i>
                         </h4>
                         <h2 className="mb-5">{state.monthlyLeads}</h2>
                     </div>
@@ -109,7 +128,7 @@ function Dashboard(props) {
               <div className="col-12 grid-margin">
                 <div className="card">
                     <div className="card-body animated fadeIn">
-                        <h4 className="card-title">Recent Clients</h4>
+                        <h4 className="card-title">Recent Leads</h4>
                         <div className="table-responsive">
                         <table className="table">
                             <thead>
@@ -143,9 +162,9 @@ const mapStateToProps = (state) => {
 }
 
 /**
- * redux state can be change by calling 'props.setAuthUserProp('demo user');' when
+ * redux state can be change by calling 'props.setAuthUserProp('demo user');' when 
  * applicable(Optional to )
- *
+ * 
  */
 const mapDispatchToProps = (dispatch) => {
     return {

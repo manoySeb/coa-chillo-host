@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import rootAction from '../../redux/actions/index'
 import { fadeIn } from 'animate.css'
 import BeatLoader from 'react-spinners/BeatLoader'
-import { showNotification} from '../../Helpers'
+import { showSznNotification} from '../../Helpers'
 import LoadingOverlay from 'react-loading-overlay';
 import SimpleReactValidator from 'simple-react-validator';
 import { Link, useHistory } from 'react-router-dom';
@@ -23,9 +23,9 @@ function NewLead(props) {
         loading: false,
         authUser: props.authUserProp
     });
-
+    
     let history = useHistory();
-
+    
     //validator
     const [, forceUpdate] = useState() //this is a dummy state, when form submitted, change the state so that message is rendered
     const simpleValidator = useRef(new SimpleReactValidator({
@@ -49,7 +49,7 @@ function NewLead(props) {
 
     const onSubmitHandle = (e) =>{
         e.preventDefault();
-
+        
         if (simpleValidator.current.allValid()) {
             setState({
                 ...state,
@@ -66,19 +66,19 @@ function NewLead(props) {
                     var errorArray = response.data.message;
                     $.each( errorArray, function( key, errors ) {
                         $.each( errors, function( key, errorMessage ) {
-                            showNotification({
+                            showSznNotification({
                                 type : 'error',
                                 message : errorMessage
                             });
                         });
                     });
                 } else if (response.data.status == 'error') {
-                        showNotification({
+                        showSznNotification({
                             type : 'error',
                             message : response.data.message
                         });
                 } else if (response.data.status == 'success') {
-                    showNotification({
+                    showSznNotification({
                         type : 'success',
                         message : response.data.message
                     });
@@ -87,7 +87,7 @@ function NewLead(props) {
             })
             .catch((error) => {
                 console.log(error);
-
+                
                 setState({
                     ...state,
                     loading: false
@@ -96,18 +96,18 @@ function NewLead(props) {
                     var errorArray = error.response.data.message;
                     $.each( errorArray, function( key, errors ) {
                         $.each( errors, function( key, errorMessage ) {
-                            showNotification({
+                            showSznNotification({
                                 type : 'error',
                                 message : errorMessage
                             });
                         });
                     });
                 } else if (error.response.data.status == 'error') {
-                    showNotification({
+                    showSznNotification({
                         type : 'error',
                         message : error.response.data.message
                     });
-                }
+                } 
             });
         } else {
             simpleValidator.current.showMessages();
@@ -151,7 +151,7 @@ function NewLead(props) {
                                                     <i className="mdi mdi-account"></i>
                                                 </span>
                                             </div>
-                                            <input type="text" className="form-control form-control-sm" id="name" name="name" placeholder="Name"
+                                            <input type="text" className="form-control form-control-sm" id="name" name="name" placeholder="Name" 
                                             value={state.name} onChange={onChangeHandle}/>
                                         </div>
                                         {simpleValidator.current.message('name', state.name, 'required')}

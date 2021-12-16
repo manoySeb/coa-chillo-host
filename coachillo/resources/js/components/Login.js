@@ -33,7 +33,7 @@ class Login extends Component {
 
     onSubmitHandle = (e) =>{
         e.preventDefault();
-
+        
         if (this.validator.allValid()) {
             this.setState({
                 loading: true
@@ -83,8 +83,8 @@ class Login extends Component {
                         type : 'error',
                         message : error.response.data.message
                     });
-                }
-
+                } 
+                
             });
         } else {
             this.validator.showMessages();
@@ -109,9 +109,9 @@ class Login extends Component {
                 >
                     <div className="auth-form-light text-left p-5 animated fadeIn">
                         <div className="brand-logo">
-                            <h1 className="text-center" style={{color: '#da8cff'}}>Coa-Chillo</h1>
+                            <h1 className="text-center" style={{color: '#da8cff'}}>{global.variables.site_name}</h1>
                         </div>
-                        <h4>Welcome Coach, Sign in to begin.</h4>
+                        <h4>Hello! let's get started</h4>
                         <form className="pt-3" ref={c => { this.form = c }} onSubmit={this.onSubmitHandle}>
                             <div className="form-group">
                                 <input type="text" className="form-control form-control-lg" name="email" id="email" placeholder="Email" value={this.state.email} onChange={this.onChangeHandle}/>

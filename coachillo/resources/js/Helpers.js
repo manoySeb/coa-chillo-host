@@ -2,7 +2,7 @@ import iziToast from 'iziToast'
 import 'iziToast/dist/css/iziToast.css';
 import { fadeIn } from 'animate.css'
 
-export function showNotification(params) {
+export function showSznNotification(params) {
     return iziToast.show({
         title: params.title ? params.title : '',
         message: params.message,
