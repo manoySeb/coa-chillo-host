@@ -52,9 +52,9 @@ function App() {
 				<div className="col-lg-12 grid-margin stretch-card">
 					
 						<Switch>
-							<Route exact path='/lead/list' > <LeadList /> </Route>
-							<Route path='/lead/new' > <NewLead /> </Route>
-							<Route path='/lead/edit/:id' component={EditLead} /> 
+							<Route exact path='/products/list' > <LeadList /> </Route>
+							<Route path='/products/new' > <NewLead /> </Route>
+							<Route path='/products/edit/:id' component={EditLead} /> 
 						</Switch>
 					
 				</div>

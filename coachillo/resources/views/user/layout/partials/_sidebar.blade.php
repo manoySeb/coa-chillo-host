@@ -46,7 +46,7 @@
               </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('Dashboard') }}">
+                <a class="nav-link" href="{{ route('Products') }}">
                   <span class="menu-title">Products</span>
                   <i class="mdi mdi-home menu-icon"></i>
                 </a>
