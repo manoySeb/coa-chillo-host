@@ -8,7 +8,7 @@ Route::group(['middleware' => ['auth:api'], 'prefix' => 'v1'], function () {
     Route::post('/lead/create', 'Api\LeadController@create');
     Route::post('/lead/update', 'Api\LeadController@update');
     Route::post('/lead/destroy', 'Api\LeadController@destroy');
-
+    
     Route::get('/dashboard-data', 'Api\HomeController@getData');
 });
 

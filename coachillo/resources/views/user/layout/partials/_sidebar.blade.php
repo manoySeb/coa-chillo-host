@@ -20,18 +20,23 @@
                 <i class="mdi mdi-home menu-icon"></i>
               </a>
             </li>
+
             <li class="nav-item">
-                <a class="nav-link" data-toggle="collapse" href="#lead-routes" aria-expanded="false" aria-controls="lead-routes">
+                <a class="nav-link" data-toggle="collapse" href="#calc-routes" aria-expanded="false" aria-controls="lead-routes">
                   <span class="menu-title">Calculator</span>
                   <i class="menu-arrow"></i>
-                  <i class="mdi mdi-account-multiple menu-icon"></i>
+                  <i class="mdi mdi-calculator menu-icon"></i>
                 </a>
-                <div class="collapse" id="lead-routes">
+                <div class="collapse" id="calc-routes">
+                  <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('Leads') }}">Volume Point Calculator</a></li>
+                  </ul>
                   <ul class="nav flex-column sub-menu">
                     <li class="nav-item"> <a class="nav-link" href="{{ route('Leads') }}">History</a></li>
                   </ul>
                 </div>
               </li>
+
             <li class="nav-item">
               <a class="nav-link" data-toggle="collapse" href="#lead-routes" aria-expanded="false" aria-controls="lead-routes">
                 <span class="menu-title">Leads</span>
