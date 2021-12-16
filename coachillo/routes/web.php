@@ -45,4 +45,16 @@ Route::group(['middleware' => ['auth']], function () {
 
 });
 
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/logout', 'HomeController@logout')->name('Logout');
+    Route::get('/home', 'HomeController@index')->name('Dashboard');
+    
+    //react route
+    Route::get('/products/list', 'ProductController@index')->name('Products');
+    Route::get('/products/new', 'ProductController@index')->name('NewProduct');
+    Route::get('/products/edit/{id}', 'ProductController@index')->name('EditProduct');
+
+
+});
+
 Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');

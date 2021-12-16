@@ -9,6 +9,6 @@ class ProductController extends Controller
 {
     public function index(Request $request)
     {
-        // return view('user.lead.index');
+        return view('user.product.index');
     }
 }
